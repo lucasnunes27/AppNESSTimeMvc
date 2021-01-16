@@ -1,0 +1,125 @@
+﻿@{
+    ViewData["Title"] = "Corinthians";
+}
+
+
+<head>
+
+    <title>Corinthians</title>
+
+</head>
+<style>
+    body {
+        background: black;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: black;
+    }
+
+    section {
+        background: black;
+        padding: 20px;
+    }
+
+    footer {
+        background: white;
+    }
+
+    .container div {
+        padding: 1%;
+        box-sizing: border-box;
+        min-height: 100px;
+    }
+
+    .left-col {
+        background-color: black;
+        color: white;
+    }
+
+    .right-col {
+        background-color: black;
+        color: white;
+    }
+</style>
+<div>
+    <style>
+        .carousel-item {
+            height: 22rem;
+            background: gray;
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            color: black;
+            padding: 30px;
+            font-size: larger;
+        }
+    </style>
+
+
+    <div id="myCarousel" class="carousel slide"
+         data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel"
+                data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel"
+                data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <h1 style="font-size:2vw" color="black"> Conheça a história de um dos maiores clubes do Brasil </h1>
+                    <br />
+                    <p>
+                        Não é de hoje que o Corinthians é um time popular. Foram operários do Bairro do Bom Retiro
+                        (bairro popular da cidade de São Paulo) que se uniram para fundar um time de futebol, no dia
+                        1 de setembro de 1910, o Sport Clube Corinthians Paulista. A ideia era disputar um campeonato
+                        de várzea na cidade, já que o campeonato oficial permitia apenas que times elitistas participassem da disputa.
+                    </p>
+                    <a class="btn btn-primary" @Html.ActionLink("Gostaria de conhecer um pouco mais?", "Index", "Times")</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h1>Explore o elenco atual do timão!</h1>
+                    <br />
+                    <p>
+                        Que participará esse ano da Florida Cup, Campeonato Paulista,
+                        Copa do Brasil, Série A do Campeonato Brasileiro
+                        e Copa Libertadores da América.
+                    </p>
+                    <br />
+                    <a class="btn btn-primary" @Html.ActionLink("Ver Elenco", "Index", "Jogadores")</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="https://portalcorreio.com.br/wp-content/uploads/2019/09/arenacorinthians.jpg" />
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="color: white">
+        <p>
+            Aqui você também pode conhecer um pouco sobre uma das maiores conquistas do Timão!
+            <br />
+            Conheça um pouco mais sobre a casa do Corinthians, e sobre a história desse novissimo estádio,
+            conhecido pelo país todo.
+            <br />
+            <a class="btn btn-primary" @Html.ActionLink("Descobrir estádio", "Index", "Times")</a>
+            <br />
+        </p>
+    </div>
+</div>
+<div class="container"></div>

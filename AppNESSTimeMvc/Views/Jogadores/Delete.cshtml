@@ -1,0 +1,112 @@
+﻿@model AppNESSTimeMvc.Models.Jogador
+
+@{
+    ViewData["Title"] = "Excluir Registro";
+}
+
+<h1>Excluir Atleta </h1>
+
+<style>
+    body {
+        background: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: black;
+    }
+
+    section {
+        background: black;
+        padding: 20px;
+    }
+
+    footer {
+        background: white;
+    }
+</style>
+
+<h3>Certeza que deseja excluir os registros de @Model.Nome?</h3>
+<div>
+    <h4>Essa ação não poderá ser revertida mais tarde</h4>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Nome)
+            <br />
+            @Html.DisplayFor(model => model.Nome)
+        </dt>
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.NomeCompleto)
+            <br />
+            @Html.DisplayFor(model => model.NomeCompleto)
+        </dt>
+
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.Numero)
+            <br />
+            @Html.DisplayFor(model => model.Numero)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Idade)
+            <br />
+            @Html.DisplayFor(model => model.Idade)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Ativo)
+            <br />
+            @Html.DisplayFor(model => model.Ativo)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Posicao)
+            <br />
+            @Html.DisplayFor(model => model.Posicao)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Jogos)
+            <br />
+            @Html.DisplayFor(model => model.Jogos)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Gols)
+            <br />
+            @Html.DisplayFor(model => model.Gols)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Data)
+            <br />
+            @Html.DisplayFor(model => model.Data)
+        </dt>
+
+        <dt class="col-md-4">
+            <br />
+            @Html.DisplayNameFor(model => model.Time)
+            <br />
+            @Html.DisplayFor(model => model.Time.Nome)
+        </dt>
+    </dl>
+</div>
+    
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <a class="btn btn-outline-danger" asp-action="Index">Voltar</a>
+    <input type="submit" value="Apagar" class="btn" style="background: #ed1c2e" /> 
+</form>
+ 
