@@ -14,7 +14,7 @@
 
 @if (TempData["EditJogador"] != null)
 {
-    <div class="alert alert-danger">
+    <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">x</button>
         <h3>@TempData["EditJogador"].ToString()</h3>
     </div>
@@ -22,7 +22,7 @@
 
 @if (TempData["DeleteJogador"] != null)
 {
-    <div class="alert alert-success">
+    <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">x</button>
         <h3>@TempData["DeleteJogador"].ToString()</h3>
     </div>
@@ -53,6 +53,9 @@
     footer {
         background: white;
     }
+    .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: red;
+    }
 </style>
 
 <a href="@Url.Action("Create", "Jogadores")" class="btn" style="background:#ed1c2e">Adicionar Novo Atleta</a>
@@ -80,29 +83,32 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero)
-            </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Numero)
+    </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Posicao)
-            </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Posicao)
+    </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Gols)
-            </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gols)
+    </td>
 
-            <td>
-                <a href="@Url.Action("Edit", "Jogadores", new { id=item.Id })" class="btn btn-outline-danger">Editar</a>
-                <a href="@Url.Action("Details", "Jogadores", new { id=item.Id })" class="btn  btn-outline-danger">Inspecionar</a>
-                <a href="@Url.Action("Delete", "Jogadores", new { id=item.Id })" class="btn  btn-outline-danger">Apagar</a>
-            </td>
-        </tr>
+    <td>
+        <a href="@Url.Action("Edit", "Jogadores", new { id=item.Id })" class="btn btn-outline-danger">Editar</a>
+        <a href="@Url.Action("Details", "Jogadores", new { id=item.Id })" class="btn  btn-outline-danger">Inspecionar</a>
+        <a href="@Url.Action("Delete", "Jogadores", new { id=item.Id })" class="btn  btn-outline-danger">Apagar</a>
+    </td>
+    
+</tr>
     }
 
 </table>
+
+<div><br/></div>

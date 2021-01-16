@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AppNESSTimeMvc.Data;
 using AppNESSTimeMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AppNESSTimeMvc.Controllers
 {
+    [Authorize]
     public class JogadoresController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,6 +22,7 @@ namespace AppNESSTimeMvc.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [Route("lista-jogadores")]
         public async Task<IActionResult> Index()
         {
@@ -28,6 +31,7 @@ namespace AppNESSTimeMvc.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
