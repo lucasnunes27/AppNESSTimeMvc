@@ -7,5 +7,5 @@ Técnologias utilizadas -
   front-end: bootstrap, CSS, html,
   back-end: c#,
   autenticação: User identity,
-  Database: SqlSrver,
+  Database: SqlServer,
   ferramenta de desenvolvimento: VS/2019.
